@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const images = [
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_disffusion_1.5.png',
+        desc: 'Stable Disffusion 1.5'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/duchaitenclassicanime.png',
+        desc: 'DucHaitenClassicAnime'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_diffusion_2.1.png',
+        desc: 'Stable Diffusion 2.1'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_disffusion_1.5.png',
+        desc: 'Stable Disffusion 1.5'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_disffusion_1.5.png',
+        desc: 'Stable Disffusion 1.5'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_disffusion_1.5.png',
+        desc: 'Stable Disffusion 1.5'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_disffusion_1.5.png',
+        desc: 'Stable Disffusion 1.5'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_disffusion_1.5.png',
+        desc: 'Stable Disffusion 1.5'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_disffusion_1.5.png',
+        desc: 'Stable Disffusion 1.5'
+    },
+    {
+        src: 'https://f004.backblazeb2.com/file/fri3d-pics/SPDM/stable_disffusion_1.5.png',
+        desc: 'Stable Disffusion 1.5'
+    },
+]
+---
+
+<Layout title='Same Proompt'>
+
+    <h1>Same Prompt, Different Model</h1>
+
+    <div class="wrapper">
+        {images.map((image) => (
+            <div class="box">
+                <div class="image">
+                    <img src={image.src} alt={image.desc} />
+                </div>
+                <div>
+                    <p>{image.desc}</p>
+                </div>
+            </div>
+        ))}
+    </div>
+
+
+</Layout>
+
+<style>
+    h1 {
+        font-family: 'IBM';
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        height: 300px
+    }
+
+    .image img{
+        flex-grow: 2;
+
+    }
+
+    p{
+        font-family: 'IBM';
+    }
+</style>
